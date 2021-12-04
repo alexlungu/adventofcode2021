@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-$filename = './dayOneInput.txt';
+$filename = __DIR__ . '/input.txt';
 
 if (!file_exists($filename)) {
     dd("$filename cannot be found");
