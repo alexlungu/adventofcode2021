@@ -1,5 +1,9 @@
 {
     "require-dev": {
         "symfony/var-dumper": "^6.0"
+    },
+    "require": {
+        "php-ai/php-ml": "^0.4.1",
+        "spatie/array-functions": "^1.9"
     }
 }
