@@ -1,5 +1,8 @@
 <?php
 require 'vendor/autoload.php';
+require_once __DIR__ . '/../utils.php';
+
+calcExecutionTime();
 
 $filename = __DIR__ . '/input.txt';
 
@@ -40,8 +43,9 @@ for ($p1 = 0; $p1 <= $valuesCount; ++$p1) {
     }
 }
 
-dd($largerThanPreviousMeasurementCount);
-
+$executionTime = calcExecutionTime();
+dump("Answer: $largerThanPreviousMeasurementCount");
+dump("Execution time: $executionTime");
 
 
 

@@ -1,5 +1,8 @@
 <?php
 require 'vendor/autoload.php';
+require_once __DIR__ . '/../utils.php';
+
+calcExecutionTime();
 
 $filename = __DIR__ . '/input.txt';
 
@@ -7,10 +10,10 @@ if (!file_exists($filename)) {
     dd("$filename cannot be found");
 }
 
+$largerThanPreviousMeasurementCount = 0;
+
 if ($handle = fopen($filename, 'rb')) {
     $previousMeasurement = null;
-    $largerThanPreviousMeasurementCount = 0;
-
     while (($currValue = fgets($handle)) !== false) {
         $currValue = trim($currValue);
         if ($previousMeasurement === null) {
@@ -25,10 +28,11 @@ if ($handle = fopen($filename, 'rb')) {
         $previousMeasurement = $currValue;
     }
     fclose($handle);
-
-
-    dd($largerThanPreviousMeasurementCount);
 }
+
+$executionTime = calcExecutionTime();
+dump("Answer: $largerThanPreviousMeasurementCount");
+dump("Execution time: $executionTime");
 
 
 

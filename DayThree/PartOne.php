@@ -1,6 +1,8 @@
 <?php
 require 'vendor/autoload.php';
+require_once __DIR__ . '/../utils.php';
 
+calcExecutionTime();
 $filename = __DIR__ . '/input.txt';
 
 if (!file_exists($filename)) {
@@ -32,11 +34,8 @@ foreach ($occurrences as $values) {
     $epsilonRateBinary .= array_search(min($values),$values);
 }
 
-dump("Binary representation of gamma rate is $gammaRateBinary");
-dump("Decimal gamma rate is " . bindec($gammaRateBinary));
-dump("Binary representation of epsilon rate is $epsilonRateBinary");
-dump("Decimal epsilon rate is " . bindec($epsilonRateBinary));
-
-dd("Power consumption: " . (bindec($gammaRateBinary) * bindec($epsilonRateBinary)));
+$executionTime = calcExecutionTime();
+dump("Answer " . (bindec($gammaRateBinary) * bindec($epsilonRateBinary)));
+dump("Execution time: $executionTime");
 
 

@@ -1,6 +1,8 @@
 <?php
 require 'vendor/autoload.php';
+require_once __DIR__ . '/../utils.php';
 
+calcExecutionTime();
 $filename = __DIR__ . '/input.txt';
 
 if (!file_exists($filename)) {
@@ -32,8 +34,8 @@ if ($handle = fopen($filename, 'rb')) {
     }
     fclose($handle);
 }
-dump("Horizontal position $horizontalPos");
-dump("Depth $depth");
-dd($horizontalPos * $depth);
+$executionTime = calcExecutionTime();
+dump("Answer " . $horizontalPos * $depth);
+dump("Execution time: $executionTime");
 
 

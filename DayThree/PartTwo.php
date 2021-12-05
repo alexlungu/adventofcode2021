@@ -1,6 +1,8 @@
 <?php
 require 'vendor/autoload.php';
+require_once __DIR__ . '/../utils.php';
 
+calcExecutionTime();
 $filename = __DIR__ . '/input.txt';
 
 if (!file_exists($filename)) {
@@ -38,14 +40,12 @@ for ($i = 1; $i <= 12; ++$i) {
     }
 }
 
-dump("Binary representation of oxygen generator rating is $oxygenGeneratorRatingBinary");
-dump("Decimal oxygen generator rating is " . bindec($oxygenGeneratorRatingBinary));
-dump("Binary representation of co2 scrubber rating is $co2ScrubberRatingBinary");
-dump("Decimal co2 scrubber rating is " . bindec($co2ScrubberRatingBinary));
+$executionTime = calcExecutionTime();
+dump("Answer " . (bindec($oxygenGeneratorRatingBinary) * bindec($co2ScrubberRatingBinary)));
+dump("Execution time: $executionTime");
 
-dd("Life Support rating: " . (bindec($oxygenGeneratorRatingBinary) * bindec($co2ScrubberRatingBinary)));
-
-function getOccurrencesAtPositionCount(array $input, $position) {
+function getOccurrencesAtPositionCount(array $input, $position): array
+{
     $occurrences[$position] = [
         0 => 0,
         1 => 0

@@ -1,9 +1,11 @@
 <?php
+require 'vendor/autoload.php';
+require_once __DIR__ . '/../utils.php';
 
 use Phpml\Math\Matrix;
 use function Spatie\array_flatten;
 
-require 'vendor/autoload.php';
+calcExecutionTime();
 
 $filename = __DIR__ . '/input.txt';
 
@@ -62,4 +64,7 @@ foreach ($bingoNumbers as $selectedNumber) {
         }
     }
 }
-dd("Loosing Sum found! $loosingCardSum");
+
+$executionTime = calcExecutionTime();
+dump("Answer " . $loosingCardSum);
+dump("Execution time: $executionTime");
