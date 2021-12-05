@@ -70,4 +70,6 @@ php DayFour/PartTwo.php
 | [DayThree - Part 2](DayThree/PartTwo.php) |  Lowest: `3.0820ms`  Highest: `3.2430ms` |
 | [DayFour - Part 1](DayFour/PartOne.php) |  Lowest: `14.7171ms`  Highest: `15.1761ms` |
 | [DayFour - Part 2](DayFour/PartTwo.php) |  Lowest: `59.2921ms`  Highest: `60.3790ms` |
-| [DayFive](DayFive) |  :x: |
+| [DayFive - Part 1](DayFive/PartOne.php) |  Lowest: `39.6659ms`  Highest: `40.7341ms` |
+| [DayFive - Part 2](DayFive/PartTwo.php) |  Lowest: `690.7170ms`  Highest: `704.0212ms` |
+| [DaySix](DaySix) |  :x: |
