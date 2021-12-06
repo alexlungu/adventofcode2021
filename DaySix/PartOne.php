@@ -2,9 +2,6 @@
 require 'vendor/autoload.php';
 require_once __DIR__ . '/../utils.php';
 
-use Phpml\Math\Matrix;
-use function Spatie\array_flatten;
-
 calcExecutionTime();
 
 $filename = __DIR__ . '/input.txt';
