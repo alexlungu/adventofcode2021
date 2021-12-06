@@ -55,7 +55,19 @@ php DayFour/PartOne.php
 php DayFour/PartTwo.php
 ```
 
-###### Days 5 - 25
+###### Day 5
+```bash
+php DayFive/PartOne.php
+php DayFive/PartTwo.php
+```
+
+###### Day 6
+```bash
+php DaySix/PartOne.php
+php DaySix/PartTwo.php
+```
+
+###### Days 7 - 25
 ... waiting for challenges to be published
 
 # Benchmarks
@@ -72,4 +84,6 @@ php DayFour/PartTwo.php
 | [DayFour - Part 2](DayFour/PartTwo.php) |  Lowest: `59.2921ms`  Highest: `60.3790ms` |
 | [DayFive - Part 1](DayFive/PartOne.php) |  Lowest: `39.6659ms`  Highest: `40.7341ms` |
 | [DayFive - Part 2](DayFive/PartTwo.php) |  Lowest: `690.7170ms`  Highest: `704.0212ms` |
-| [DaySix](DaySix) |  :x: |
+| [DaySix - Part 1](DaySix/PartOne.php) |  Lowest: `285.5840ms`  Highest: `295.0790ms` |
+| [DaySix - Part 2](DaySix/PartTwo.php) |  :x: |
+| [DaySeven](DaySeven) |  :x: |
