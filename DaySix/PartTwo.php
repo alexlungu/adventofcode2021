@@ -9,62 +9,39 @@ $filename = __DIR__ . '/input.txt';
 if (!file_exists($filename)) {
     dd("$filename cannot be found");
 }
-$coordPoints = [];
-if ($handle = fopen($filename, 'rb')) {
-    while (($line = fgets($handle)) !== false) {
-        $line = trim($line);
-        preg_match('/(?\'x1\'\d+),(?\'y1\'\d+)\s+\-\>\s+(?\'x2\'\d+),(?\'y2\'\d+)/', $line, $coords);
 
-        // Is it a diagonal line?
-        if (abs($coords['x1'] - $coords['x2']) === abs($coords['y1'] - $coords['y2'])) {
-            $colRange = getRange($coords['x1'], $coords['x2']);
-            $rowRange = getRange($coords['y1'], $coords['y2']);
+$input = file($filename);
+$initialFishCount = array_map('intval', explode(',', reset($input)));
+$initialFishCount = array_count_values($initialFishCount);
+krsort($initialFishCount);
 
-            foreach ($colRange as $colPos => $col) {
-                foreach ($rowRange as $rosPos => $row) {
-                    if ($colPos === $rosPos) {
-                        if (!isset($coordPoints["{$col}_{$row}"])) {
-                            $coordPoints["{$col}_{$row}"] = 0;
-                        }
-                        ++$coordPoints["{$col}_{$row}"];
-                    }
-                }
+$noOfDays = 256;
+
+for ($day = 1; $day <= $noOfDays; ++$day) {
+    $newFishCount = [];
+    foreach ($initialFishCount as $state => $count) {
+        if ($state === 0) {
+            if (isset($newFishCount[6])) {
+                $newFishCount[6] += $count;
+            } else {
+                $newFishCount[6] = $count;
+            }
+
+            if (isset($newFishCount[8])) {
+                $newFishCount[8] += $count;
+            } else {
+                $newFishCount[8] = $count;
             }
             continue;
         }
 
-        // Add generate coords for same row or same column
-        if ($coords['x1'] === $coords['x2'] || $coords['y1'] === $coords['y2']) {
-            // generate the range of values for setting inside the array
-            $colRange = getRange($coords['x1'], $coords['x2']);
-            $rowRange = getRange($coords['y1'], $coords['y2']);
-
-            foreach ($colRange as $colPos => $col) {
-                foreach ($rowRange as $rosPos => $row) {
-                    if (!isset($coordPoints["{$col}_{$row}"])) {
-                        $coordPoints["{$col}_{$row}"] = 0;
-                    }
-                    ++$coordPoints["{$col}_{$row}"];
-                }
-            }
-        }
-
+        $newFishCount[$state - 1] = $count;
     }
-}
 
-/**
- * @param mixed ...$values
- * @return array
- */
-function getRange(...$values): array
-{
-    return range(...$values);
+    krsort($newFishCount);
+    $initialFishCount = $newFishCount;
 }
-
-$totalIntersectingPoints = array_count_values($coordPoints);
-// We only need intersecting points where for two or more lines
-unset($totalIntersectingPoints['1']);
 
 $executionTime = calcExecutionTime();
-dump("Answer " . array_sum($totalIntersectingPoints));
+dump("Answer " . array_sum($initialFishCount));
 dump("Execution time: $executionTime");

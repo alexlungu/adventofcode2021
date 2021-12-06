@@ -11,24 +11,37 @@ if (!file_exists($filename)) {
 }
 
 $input = file($filename);
+$initialFishCount = array_map('intval', explode(',', reset($input)));
+$initialFishCount = array_count_values($initialFishCount);
+krsort($initialFishCount);
+
 $noOfDays = 80;
-$initialState = reset($input);
 
 for ($day = 1; $day <= $noOfDays; ++$day) {
-    // check for any 0 day fish
-    $newFishToBeAdded = substr_count($initialState, '0');
-    $initialState .= str_repeat(',9', $newFishToBeAdded);
-    $initialState = str_replace('0', '7', $initialState);
+    $newFishCount = [];
+    foreach ($initialFishCount as $state => $count) {
+        if ($state === 0) {
+            if (isset($newFishCount[6])) {
+                $newFishCount[6] += $count;
+            } else {
+                $newFishCount[6] = $count;
+            }
 
-    preg_match_all('/\d/', $initialState, $fishState);
-    $fishState = array_unique($fishState[0]);
-    sort($fishState);
+            if (isset($newFishCount[8])) {
+                $newFishCount[8] += $count;
+            } else {
+                $newFishCount[8] = $count;
+            }
+            continue;
+        }
 
-    foreach ($fishState as $state) {
-        $initialState = str_replace($state, ((int)$state-1), $initialState);
+        $newFishCount[$state - 1] = $count;
     }
+
+    krsort($newFishCount);
+    $initialFishCount = $newFishCount;
 }
 
 $executionTime = calcExecutionTime();
-dump("Answer " . count(explode(',', $initialState)));
+dump("Answer " . array_sum($initialFishCount));
 dump("Execution time: $executionTime");
