@@ -97,23 +97,11 @@ php DayEleven/PartOne.php
 php DayEleven/PartTwo.php
 ```
 
-###### Day 12
-```bash
-php DayTwelve/PartOne.php
-php DayTwelve/PartTwo.php
-```
+###### Day 12 - not done yet
 
-###### Day 13
-```bash
-php DayThirteen/PartOne.php
-php DayThirteen/PartTwo.php
-```
+###### Day 13 - not done yet
 
-###### Day 14
-```bash
-php DayFourteen/PartOne.php
-php DayFourteen/PartTwo.php
-```
+###### Day 14 - not done yet
 
 ###### Days 15 - 25
 ... waiting for challenges to be published
@@ -142,8 +130,8 @@ php DayFourteen/PartTwo.php
 | [DayNine - Part 2](DayNine/PartTwo.php) |  Lowest: `20.7920ms`  Highest: `21.9350ms` |
 | [DayTen - Part 1](DayTen/PartOne.php) |  Lowest: `0.6461ms`  Highest: `0.6840ms` |
 | [DayTen - Part 2](DayTen/PartTwo.php) |  Lowest: `0.6120ms`  Highest: `0.6919ms` |
-| [DayEleven - Part 1](DayEleven/PartOne.php) |  Lowest: `x`  Highest: `x` |
-| [DayEleven - Part 2](DayEleven/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayEleven - Part 1](DayEleven/PartOne.php) |  Lowest: `3.5381ms`  Highest: `4.4131ms` |
+| [DayEleven - Part 2](DayEleven/PartTwo.php) |  Lowest: `10.3900ms`  Highest: `11.4682ms` |
 | [DayTwelve - Part 1](DayTwelve/PartOne.php) |  Lowest: `x`  Highest: `x` |
 | [DayTwelve - Part 2](DayTwelve/PartTwo.php) |  Lowest: `x`  Highest: `x` |
 | [DayThirteen - Part 1](DayThirteen/PartOne.php) |  Lowest: `x`  Highest: `x` |
