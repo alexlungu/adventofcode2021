@@ -86,4 +86,6 @@ php DaySix/PartTwo.php
 | [DayFive - Part 2](DayFive/PartTwo.php) |  Lowest: `690.7170ms`  Highest: `704.0212ms` |
 | [DaySix - Part 1](DaySix/PartOne.php) |  Lowest: `0.1390ms`  Highest: `0.2551ms` |
 | [DaySix - Part 2](DaySix/PartTwo.php) |  Lowest: `0.2658ms`  Highest: `0.2820ms` |
-| [DaySeven](DaySeven) |  :x: |
+| [DaySeven - Part 1](DaySeven/PartOne.php) |  Lowest: `45.0990ms`  Highest: `47.4420ms` |
+| [DaySeven - Part 2](DaySeven/PartTwo.php) |  Lowest: `77.5850ms`  Highest: `78.7101ms` |
+| [DayEight](DayEight) |  :x: |
