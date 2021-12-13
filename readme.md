@@ -67,7 +67,55 @@ php DaySix/PartOne.php
 php DaySix/PartTwo.php
 ```
 
-###### Days 7 - 25
+###### Day 7
+```bash
+php DaySeven/PartOne.php
+php DaySeven/PartTwo.php
+```
+
+###### Day 8
+```bash
+php DayEight/PartOne.php
+php DayEight/PartTwo.php
+```
+
+###### Day 9
+```bash
+php DayNine/PartOne.php
+php DayNine/PartTwo.php
+```
+
+###### Day 10
+```bash
+php DayTen/PartOne.php
+php DayTen/PartTwo.php
+```
+
+###### Day 11
+```bash
+php DayEleven/PartOne.php
+php DayEleven/PartTwo.php
+```
+
+###### Day 12
+```bash
+php DayTwelve/PartOne.php
+php DayTwelve/PartTwo.php
+```
+
+###### Day 13
+```bash
+php DayThirteen/PartOne.php
+php DayThirteen/PartTwo.php
+```
+
+###### Day 14
+```bash
+php DayFourteen/PartOne.php
+php DayFourteen/PartTwo.php
+```
+
+###### Days 15 - 25
 ... waiting for challenges to be published
 
 # Benchmarks
@@ -88,4 +136,18 @@ php DaySix/PartTwo.php
 | [DaySix - Part 2](DaySix/PartTwo.php) |  Lowest: `0.2658ms`  Highest: `0.2820ms` |
 | [DaySeven - Part 1](DaySeven/PartOne.php) |  Lowest: `45.0990ms`  Highest: `47.4420ms` |
 | [DaySeven - Part 2](DaySeven/PartTwo.php) |  Lowest: `77.5850ms`  Highest: `78.7101ms` |
-| [DayEight](DayEight) |  :x: |
+| [DayEight - Part 1](DayEight/PartOne.php) |  Lowest: `0.4990ms`  Highest: `0.8938ms` |
+| [DayEight - Part 2](DayEight/PartTwo.php) |  Lowest: `0.9799ms`  Highest: `1.6770ms` |
+| [DayNine - Part 1](DayNine/PartOne.php) |  Lowest: `x`  Highest: `x` |
+| [DayNine - Part 2](DayNine/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayTen - Part 1](DayTen/PartOne.php) |  Lowest: `x`  Highest: `x` |
+| [DayTen - Part 2](DayTen/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayEleven - Part 1](DayEleven/PartOne.php) |  Lowest: `x`  Highest: `x` |
+| [DayEleven - Part 2](DayEleven/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayTwelve - Part 1](DayTwelve/PartOne.php) |  Lowest: `x`  Highest: `x` |
+| [DayTwelve - Part 2](DayTwelve/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayThirteen - Part 1](DayThirteen/PartOne.php) |  Lowest: `x`  Highest: `x` |
+| [DayThirteen - Part 2](DayThirteen/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayFourteen - Part 1](DayFourteen/PartOne.php) |  Lowest: `x`  Highest: `x` |
+| [DayFourteen - Part 2](DayFourteen/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayFifteen](DayFifteen) |  :x: |
