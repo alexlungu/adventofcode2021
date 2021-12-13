@@ -138,8 +138,8 @@ php DayFourteen/PartTwo.php
 | [DaySeven - Part 2](DaySeven/PartTwo.php) |  Lowest: `77.5850ms`  Highest: `78.7101ms` |
 | [DayEight - Part 1](DayEight/PartOne.php) |  Lowest: `0.4990ms`  Highest: `0.8938ms` |
 | [DayEight - Part 2](DayEight/PartTwo.php) |  Lowest: `0.9799ms`  Highest: `1.6770ms` |
-| [DayNine - Part 1](DayNine/PartOne.php) |  Lowest: `x`  Highest: `x` |
-| [DayNine - Part 2](DayNine/PartTwo.php) |  Lowest: `x`  Highest: `x` |
+| [DayNine - Part 1](DayNine/PartOne.php) |  Lowest: `4.0369ms`  Highest: `5.2090ms` |
+| [DayNine - Part 2](DayNine/PartTwo.php) |  Lowest: `20.7920ms`  Highest: `21.9350ms` |
 | [DayTen - Part 1](DayTen/PartOne.php) |  Lowest: `x`  Highest: `x` |
 | [DayTen - Part 2](DayTen/PartTwo.php) |  Lowest: `x`  Highest: `x` |
 | [DayEleven - Part 1](DayEleven/PartOne.php) |  Lowest: `x`  Highest: `x` |
